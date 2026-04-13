@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+    env_file:
+      - .env.local
+    depends_on:
+      - mailpit
+    restart: unless-stopped
+
+  # Optional: Local email testing
+  mailpit:
+    image: axllent/mailpit
+    ports:
+      - '1025:1025' # SMTP
+      - '8025:8025' # Web UI
+    restart: unless-stopped
+
+  # Optional: If using local Supabase
+  # supabase:
+  #   image: supabase/postgres:15.1.0.117
+  #   ports:
+  #     - '54322:5432'
+  #   environment:
+  #     POSTGRES_PASSWORD: your-super-secret-and-long-postgres-password
+  #   volumes:
+  #     - supabase-data:/var/lib/postgresql/data
+
+# volumes:
+#   supabase-data:
