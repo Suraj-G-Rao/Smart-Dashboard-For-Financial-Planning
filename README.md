@@ -693,3 +693,5 @@ For questions, collaborations, or technical inquiries:
 ---
 
 **Built with ❤️ using Next.js 14, Supabase, and AI**
+
+
