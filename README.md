@@ -675,10 +675,6 @@ curl https://your-domain.com/api/auth/session
 - Monitor for security vulnerabilities
 - Implement rate limiting in production
 
-## 📄 License
-
-This project is licensed under MIT License.
-
 ## 🙏 Acknowledgments
 
 - [Next.js](https://nextjs.org/)
