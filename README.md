@@ -70,7 +70,7 @@ A comprehensive, AI-powered personal finance management platform built with Next
 ### 🔐 Security & Vault
 - AES-256-GCM encryption for sensitive data
 - Per-user key derivation (PBKDF2)
-- Document storage (PDF/JPG/PNG, 5MB max)
+- Document storage (PDF/JPG, 5MB max)
 - Password/note encryption
 - Auto-lock after 10 minutes
 
