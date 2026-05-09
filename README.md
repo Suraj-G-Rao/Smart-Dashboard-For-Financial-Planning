@@ -9,6 +9,7 @@ A comprehensive, AI-powered personal finance management platform built with Next
 
 ## ✨ Features
 
+
 ### 🧮 Advanced EMI Calculator + Savings Planner
 - **Advanced Loan Calculator** with amortization schedule
 - **Two Modes**: Home Loan & Other Loans with tailored strategies
